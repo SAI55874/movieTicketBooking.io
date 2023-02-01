@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bookMyShow.css">
+    <style>
+        #count{
+            margin: 10px 20%;
+            text-align: center;
+            padding: 10px;
+            background-color: aquamarine;
+            box-shadow: 5px -10px 20px black;
+            border-radius: 15px  15px 0 0;
+        }
+        #price{
+            text-align: center;
+            margin: 5% 40% 20%;
+            border-radius: 15px 0 15px;
+            font-size: xx-large;
+            background-color: rgb(40, 216, 247); 
+            box-shadow: 5px 5px 20px black;
+           
+        }
+        
+        #home{
+            margin-left: 80%;
+            margin-right: 10%;
+            margin-top: 50px;
+        }
+        #home a{
+            padding: 10px 20px;
+            text-decoration: none;
+            color: black;
+            background-color: rgb(40, 216, 247);
+            font-size: x-large;
+            border-radius: 10px;
+            box-shadow: 5px -5px 20px black;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="home"><a href="index.html">Home</a></div>
+    <div id="hall">
+            <div class="moviename">
+                <label for="">Choose a movie :</label>
+                
+                <select id="movie"  >
+                   
+                        <option value="100" >Pushpa</option>
+                        <option value="80" >Akanda</option>
+                        <option value="50" >SpiderMan</option>
+                        
+                </select></div>
+                <div class="screen">
+                    
+                </div>
+
+    <div id="theater">
+        <div id="seatingSection"> 
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+        
+        
+   
+    </div>
+    <div class="seatingSection1"> 
+       
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div> 
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        <div class="seats"> </div>
+        </div> 
+        <div class="seatingSection2"> 
+           
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            <div class="seats"> </div>
+            
+                
+            
+            </div>
+        </div>
+        <p id="count"> 0 selected</p>
+        
+       
+    </div>
+    <p id="price" > </p>
+        <script>
+      
+      let count=0;
+        let hall=document.getElementById('hall');
+        let seats=document.getElementsByClassName('seats');
+        let submit=document.getElementById('price');
+        
+        for(let i=0;i<seats.length;i++){
+            let seat=seats[i];
+            seat.addEventListener('click',(e)=>{
+                let price=document.getElementById("movie").value;
+                
+                if(!e.target.classList.contains('selected') && !e.target.classList.contains('occupied')){
+                    
+                    e.target.classList.add('selected');
+                   
+                    count++;
+                   let totalPrice=price*count;
+                    document.getElementById('price').innerHTML=totalPrice+" /- Rupees"
+                   document.getElementById('count').innerHTML=count+" selected";
+                   if(price==100){
+                       hall.style.backgroundImage="url(images/a.jpg)";
+                   }else if (price==80) {
+                    hall.style.backgroundImage="url(images/b.jpg)";
+                   } else {
+                      hall.style.backgroundImage="url(images/e.jpg)";
+                      hall.style.backgroundSize='cover';
+                   }
+                }
+                 
+                else{
+                    e.target.classList.remove('selected');
+                    count--;
+                    let totalPrice=price*count;
+                    document.getElementById('price').innerHTML=totalPrice+" /- Rupees"
+                   document.getElementById('count').innerHTML=count+" selected";
+                }
+                if(e.target.classList.contains('selected') && !e.target.classList.contains('occupied')){
+                    console.log("sai");
+                    const occ=()=>{
+
+                        e.target.classList.add('occupied');
+                        };
+                    submit.addEventListener('click',(e)=>{occ(e);
+                    document.getElementById('price').innerHTML=count+" Occupied";
+                    
+                    });
+                }
+               
+
+            }
+
+            );    
+        }
+       
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#hall{
+    background-color: gray;
+    box-shadow: 10px -10px 50px black;
+    margin: 30px 10% 20px;
+    border-radius: 10px;
+}
+#theater{
+    display: inline;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    
+   
+}
+
+#seatingSection{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+   padding: 40px 0 50px 140px;  
+}
+.seatingSection1{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+   padding: 70px 0 50px;  
+}.seatingSection2{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+   padding: 40px 140px 50px 0;  
+}
+
+.seats{
+    color: white;
+    font-size: xx-large;
+    margin: 10px;
+    width: 45px;
+    height: 35px;
+    background-color:rgb(7, 228, 18);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 10px 10px 20px black;
+}
+.selected{
+    background-color: rgb(8, 156, 241);
+
+}
+.occupied{
+    background-color: rgb(255, 38, 0);
+}
+
+.moviename{
+    text-align: center;
+    padding: 50px 0 10px 0;
+    font-size: x-large;
+    color: darkblue;
+    font-weight: bold;
+    
+}
+#movie{
+    
+    padding: 5px 50px 5px 15px;
+    border-radius: 20px;
+    border: 0;
+    font-size: x-large;
+    box-shadow: 10px 10px 20px black;
+}
+.screen{
+    padding: 50px ;
+    background-color: azure;
+    margin: 5% 30% 0;
+    box-shadow: 0px 40px 50px azure;
+    border-radius: 5px;
+    
+    transform: rotateY(140deg);
+}
+
+
